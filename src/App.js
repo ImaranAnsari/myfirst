@@ -1,26 +1,19 @@
-import FirstComponent from "./Components/FirstComponent";
-import BackDrop from "./BackDrop/BackDrop";
-import { useState } from "react";
 
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import { Routes, Route } from 'react-router-dom';
+import MainMenu from "./MainMenu/MainMenu";
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-  
-  const modalCloseHandler = ()=>{
-    setModalOpen(false);
-  }
-  const openModalHandler = ()=>{
-    setModalOpen(true);
-  }
-
-  return ( 
+  return (
     <div>
-      
-      <h1> Its My Application</h1>
-      {modalOpen?<FirstComponent owner="Imran" reason=" for Quiz" closeModal={modalCloseHandler} />:null}
-      {modalOpen?<BackDrop/>:null}
-      <button onClick={openModalHandler}> Open </button>
+      <MainMenu/>
+      <Routes>
+        <Route path='/' element={<Home />}> </Route>
+        <Route path='/About' element={<About />}> </Route>
+        <Route path='/Contact' element={<Contact />}> </Route>
+      </Routes>
     </div>
   );
 }
-
 export default App;
