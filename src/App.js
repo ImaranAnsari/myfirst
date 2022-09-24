@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import FirstComponent from "./Components/FirstComponent";
+import BackDrop from "./BackDrop/BackDrop";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [modalOpen, setModalOpen] = useState(false);
+  
+  const modalCloseHandler = ()=>{
+    setModalOpen(false);
+  }
+  const openModalHandler = ()=>{
+    setModalOpen(true);
+  }
+
+  return ( 
+    <div>
+      
+      <h1> Its My Application</h1>
+      {modalOpen?<FirstComponent owner="Imran" reason=" for Quiz" closeModal={modalCloseHandler} />:null}
+      {modalOpen?<BackDrop/>:null}
+      <button onClick={openModalHandler}> Open </button>
     </div>
   );
 }
