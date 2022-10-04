@@ -3,8 +3,11 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Product from "./pages/Product";
+
 import { Routes, Route } from 'react-router-dom';
-import MainMenu from "./MainMenu/MainMenu";
+ 
+import MainMenu from "./Components/Layouts/MainMenu";
+
 function App() {
   return (
     <div>
