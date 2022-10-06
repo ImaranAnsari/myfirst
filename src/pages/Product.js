@@ -7,7 +7,7 @@ function Product() {
         {
             id: "p1",
             product_name: "City Tour",
-            image: "https://drive.google.com/file/d/1sknRnMlPK53Vjt92QKEYzF1V9A7ur7Ze/view?usp=sharing",
+            image: src= "https://drive.google.com/file/d/1sknRnMlPK53Vjt92QKEYzF1V9A7ur7Ze/view?usp=sharing",
             discription: "Its a wonderful tour.",
             price: "25000"
         },
