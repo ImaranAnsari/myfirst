@@ -5,11 +5,12 @@ function productItem(props) {
     return <li key={props.item.id}>
         <CustomWrapper>
             <div className={Styles.image}>
-                <img src={props.item.image} alt="no"/>
+                <img src={props.item.image} alt="NoImage" />
             </div>
             <div className={Styles.content}>
+
                 <h2>{props.item.product_name}</h2>
-                <p>{props.item.discription}</p>
+                <p>{props.item.description}</p>
                 <h4>{props.item.price}</h4>
 
             </div>
