@@ -2,7 +2,6 @@
 import { useRef } from "react";
 import Styles from "./AddProductForm.module.css";
 import CustomWrapper from "../Layouts/CustomWrapper";
-//import Product from "../../pages/Product";
 
 function AddProductForm() {
     const Product_Name_ref = useRef();
@@ -24,7 +23,6 @@ function AddProductForm() {
             Description
         }
         console.log(product);
-        console.log(Product_Name);
     }
     return <CustomWrapper>
         <form className={Styles.form} onSubmit={submitHandler}>
@@ -32,12 +30,10 @@ function AddProductForm() {
                 <label htmlFor="Product_Name">Product Name</label>
                 <input type="test" placeholder="" id="Product_Name" ref={Product_Name_ref} />
             </div>
-
             <div className={Styles.groups}>
                 <label htmlFor="Image">Image</label>
                 <input type="test" placeholder="" id="Image" ref={Image_ref} />
             </div>
-
             <div className={Styles.groups}>
                 <label htmlFor="Price">Price</label>
                 <input type="test" placeholder="" id="Price" ref={Price_ref} />
@@ -46,15 +42,12 @@ function AddProductForm() {
                 <label htmlFor="Description">Description</label>
                 < textarea rows="5" id="Description" ref={Description_ref} />
             </div>
-
-
+            <div className={Styles.btn}>
+                <button>Submit</button>
+            </div>
         </form>
 
-        <div className={Styles.btn}>
-            <button>Submit</button>
-        </div>
     </CustomWrapper>
-
 }
 
 
