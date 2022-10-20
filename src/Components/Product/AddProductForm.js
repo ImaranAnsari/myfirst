@@ -3,7 +3,7 @@ import { useRef } from "react";
 import Styles from "./AddProductForm.module.css";
 import CustomWrapper from "../Layouts/CustomWrapper";
 
-function AddProductForm() {
+function AddProductForm(props) {
     const Product_Name_ref = useRef();
     const Image_ref = useRef();
     const Price_ref = useRef();
@@ -22,7 +22,8 @@ function AddProductForm() {
             Price,
             Description
         }
-        console.log(product);
+        props.addProductHandler(product)
+        
     }
     return <CustomWrapper>
         <form className={Styles.form} onSubmit={submitHandler}>
