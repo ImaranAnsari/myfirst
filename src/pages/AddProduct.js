@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AddProductForm from "../Components/Product/AddProductForm";
 
 function AddProduct() {
-    const navigate= useNavigate();
+    const navigate = useNavigate();
     function addProductHandler(newProduct) {
         fetch("http://localhost:3004/product", {
             method: "POST",
@@ -14,9 +14,9 @@ function AddProduct() {
 
             }
         })
-            .then(Response => navigate("/",{replace:true}))
-            
-            .catch (err=> console.log(err));
+            .then(Response => navigate("/", { replace: true }))
+
+            .catch(err => console.log(err));
     }
     return <AddProductForm addProductHandler={addProductHandler} />
 }
