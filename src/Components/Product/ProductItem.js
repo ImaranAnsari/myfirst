@@ -10,9 +10,9 @@ function productItem(props) {
             </div>
             <div className={Styles.content}>
 
-                <h2>{props.item.product_name}</h2>
-                <p>{props.item.description}</p>
-                <h4>{props.item.price}</h4>
+                <h2>{props.item.Product_Name}</h2>
+                <p>{props.item.Description}</p>
+                <h4>{props.item.Price}</h4>
 
             </div>
             <div className={Styles.btn}>
