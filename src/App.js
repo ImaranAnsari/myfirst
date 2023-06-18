@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Product from "./pages/Product";
 import Layouts from "./Components/Layouts/Layouts";
 import AddProduct from "./pages/AddProduct";
+import UpdateProduct from "./pages/UpdateProduct";
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/Contact' element={<Contact />}> </Route>
         <Route path='/Product' element={<Product />}> </Route>
         <Route path='/Add/Product' element={<AddProduct />}> </Route>
+        <Route path='/Update/Product' element={<UpdateProduct />}> </Route>
       </Routes>
     </Layouts>
   );
